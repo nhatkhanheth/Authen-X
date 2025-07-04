@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "2FA Submit with Shortcut",
+  "version": "1.1",
+  "description": "Ấn Ctrl+Shift+Y để điền mã 2FA (key linh động)",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://2fa.live/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "trigger-2fa": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Lấy mã 2FA và điền vào"
+    }
+  }
+}
